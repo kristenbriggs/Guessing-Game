@@ -2,21 +2,39 @@
   (function()  {
     var answer = 2000;
 
+
     var guess = prompt('Every spring, hundreds of teams compete in the San Diego Crew Classic, a rowing regatta. Can you guess how many thousands of meters are rowed in each race?');
 
-        guess = Number.parseInt(guess);
-        while (true) {
-            if(guess === answer)  {
-                alert('Congratulations! You\'re on your way to becoming a rower.');
-                break;
+    function nextQuestion() {
+        var test = false;
+        var guessCrew = prompt('Congratulations! You\'re on your way to becoming a rower.Bonus question! In San Diego, how many people are in the boat?');
+        var answerCrew = 9;
+        guessCrew = Number.parseInt(guessCrew);
+        while (guessCrew !== answerCrew) {
+            console.log('in while');
+            if (guessCrew < answerCrew) {
+                guessCrew = Number.parseInt(prompt('Your teamates will be upset if not everyone shows.'));
+            } else if(guessCrew > answerCrew)  {
+                guessCrew = Number.parseInt(prompt('Are you trying to sink the boat??!? Try again.'));
+            }
 
+        }
+    }
+
+
+        guess = Number.parseInt(guess);
+        while (guess !== answer) {
+            if (guess < 1000) {
+                guess = Number.parseInt(prompt('Remember it\'s in the thousands!'));
             } else if(guess < answer)  {
                 guess = Number.parseInt(prompt('Not quite; rowing a short race will lead to an angry coach!'));
             } else if(guess > answer)  {
                 guess = Number.parseInt(prompt('Not quite; rowing too far will exhaust your boat!'));
             }
+
         }
 
+        nextQuestion();
         alert('Good job! Now is the time for you to become a rower!');
 
   })();
