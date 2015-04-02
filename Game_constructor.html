@@ -25,11 +25,11 @@
             console.log(ask1.guess + ' ' + ask1.answer);
         while (ask1.guess !== ask1.answer) {
             if (ask1.guess < 1000) {
-                ask1.guess = Number.parseInt(prompt('Remember it\'s in the thousands!'));
+                ask1.guess = Number.parseInt(prompt('Remember, it\'s in the thousands!'));
             } else if(ask1.guess < ask1.answer)  {
-                ask1.guess = Number.parseInt(prompt('Not quite; rowing a short race will lead to an angry coach!'));
+                ask1.guess = Number.parseInt(prompt('Not quite; rowing a short race will lead to an angry coach! Try again.'));
             } else if(ask1.guess > ask1.answer)  {
-                ask1.guess = Number.parseInt(prompt('Not quite; rowing too far will exhaust your boat!'));
+                ask1.guess = Number.parseInt(prompt('Not quite; rowing too far will exhaust your boat! Try again.'));
             }
 
         }
@@ -41,7 +41,7 @@
         while (ask1.answerCrew !== guessCrew) {
 
             if (guessCrew < ask1.answerCrew) {
-                guessCrew = Number.parseInt(prompt('Your teamates will be upset if not everyone shows.'));
+                guessCrew = Number.parseInt(prompt('Your teamates will be upset if not everyone shows. Try again.'));
             } else if(guessCrew > ask1.answerCrew)  {
                 guessCrew = Number.parseInt(prompt('Are you trying to sink the boat??!? Try again.'));
             }
