@@ -1,60 +1,19 @@
-<script>
+<!DOCTYPE html.>
+<head>
+  <title>The Regatta Game</title>
 
-  (function() {
-    var Game = function (answer, user, answerCrew) {
-        this.userIdent = user;
-        this.answer = answer;
-        this.answerCrew = answerCrew;
-        this.guess;
-        this.secondquestion = function (guess) {
-            if (this.answerCrew === guess) {
-                return true;
-            }
-            return false;
-        }
-    };
+  <body>
+    <h1><strong>Welcome to the world of rowing!</strong></h1>
+    <h2>The San Diego Crew Classic</h2>
+        <img src="http://www.crewclassic.org/wp-content/themes/crewclassicresponsive/images/crew-classic-logo.png"/>
+    <h3><em>The Rowing Game</em></h3>
+    <h4>Directions</h4>
+    <ol>
+      <li>Try your best to answer questions about the Classic.</li>
+      <li>Have fun!</li>
+    </ol>
+    <p><img src="http://www.crewclassic.org/wp-content/uploads/2013/04/harvard-1000x275.jpeg"/></p>
+    <p>If you enjoyed the game today and are interested in learning more about rowing, take a chance and click on the following link.  It will change your life for the better!</p><a href="http://sammamishrowing.org/adult-program/adult-classes/learn-to-row-classes">Learn to Row Classes</a></p>
 
-    var user = prompt('Hello! What\'s your name?');
-
-    var ask1 = new Game(2000, user, 9);
-    var ask2 = new Game(9, user, 5000);
-
-    ask1.guess = prompt('Welcome. Every spring, hundreds of teams compete in the San Diego Crew Classic, a rowing regatta. How many thousands of meters are rowed in each race?');
-
-    ask1.guess = Number.parseInt(ask1.guess);
-            console.log(ask1.guess + ' ' + ask1.answer);
-        while (ask1.guess !== ask1.answer) {
-            if (ask1.guess < 1000) {
-                ask1.guess = Number.parseInt(prompt('Remember it\'s in the thousands!'));
-            } else if(ask1.guess < ask1.answer)  {
-                ask1.guess = Number.parseInt(prompt('Not quite; rowing a short race will lead to an angry coach!'));
-            } else if(ask1.guess > ask1.answer)  {
-                ask1.guess = Number.parseInt(prompt('Not quite; rowing too far will exhaust your boat!'));
-            }
-
-        }
-
-    function nextQuestion() {
-        var guessCrew = prompt('Congratulations! You\'re on your way to becoming a rower. Bonus question! In San Diego, how many people are in a boat?');
-        guessCrew = Number.parseInt(guessCrew);
-          var test = ask1.secondquestion(guessCrew);
-        while (ask1.answerCrew !== guessCrew) {
-
-            if (guessCrew < ask1.answerCrew) {
-                guessCrew = Number.parseInt(prompt('Your teamates will be upset if not everyone shows.'));
-            } else if(guessCrew > ask1.answerCrew)  {
-                guessCrew = Number.parseInt(prompt('Are you trying to sink the boat??!? Try again.'));
-            }
-
-        }
-    }
-
-
-
-
-        nextQuestion();
-        alert('Good job! Now is the time for you to become a rower!');
-
-  })();
-
-</script>
+  </body>
+</head>
