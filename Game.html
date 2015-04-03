@@ -1,42 +1,19 @@
-<script>
-  (function()  {
-    var answer = 2000;
+<!DOCTYPE html.>
+<head>
+  <title>The Regatta Game</title>
 
+  <body>
+    <h1><strong>Welcome to the world of rowing!</strong></h1>
+    <h2>The San Diego Crew Classic</h2>
+        <img src="http://www.crewclassic.org/wp-content/themes/crewclassicresponsive/images/crew-classic-logo.png"/>
+    <h3><em>The Rowing Game</em></h3>
+    <h4>Directions</h4>
+    <ol>
+      <li>Try your best to answer questions about the Classic.</li>
+      <li>Have fun!</li>
+    </ol>
+    <p><img src="http://www.crewclassic.org/wp-content/uploads/2013/04/harvard-1000x275.jpeg"/></p>
+    <p>If you enjoyed the game today and are interested in learning more about rowing, take a chance and click on the following link.  It will change your life for the better!</p><a href="http://sammamishrowing.org/adult-program/adult-classes/learn-to-row-classes">Learn to Row Classes</a></p>
 
-    var guess = prompt('Every spring, hundreds of teams compete in the San Diego Crew Classic, a rowing regatta. Can you guess how many thousands of meters are rowed in each race?');
-
-    function nextQuestion() {
-        var test = false;
-        var guessCrew = prompt('Congratulations! You\'re on your way to becoming a rower.Bonus question! In San Diego, how many people are in the boat?');
-        var answerCrew = 9;
-        guessCrew = Number.parseInt(guessCrew);
-        while (guessCrew !== answerCrew) {
-            console.log('in while');
-            if (guessCrew < answerCrew) {
-                guessCrew = Number.parseInt(prompt('Your teamates will be upset if not everyone shows.'));
-            } else if(guessCrew > answerCrew)  {
-                guessCrew = Number.parseInt(prompt('Are you trying to sink the boat??!? Try again.'));
-            }
-
-        }
-    }
-
-
-        guess = Number.parseInt(guess);
-        while (guess !== answer) {
-            if (guess < 1000) {
-                guess = Number.parseInt(prompt('Remember it\'s in the thousands!'));
-            } else if(guess < answer)  {
-                guess = Number.parseInt(prompt('Not quite; rowing a short race will lead to an angry coach!'));
-            } else if(guess > answer)  {
-                guess = Number.parseInt(prompt('Not quite; rowing too far will exhaust your boat!'));
-            }
-
-        }
-
-        nextQuestion();
-        alert('Good job! Now is the time for you to become a rower!');
-
-  })();
-
-</script>
+  </body>
+</head>
